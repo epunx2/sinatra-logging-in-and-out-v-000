@@ -18,7 +18,7 @@ class ApplicationController < Sinatra::Base
   get '/account' do
     @user = User.find_by(username: params["username"],password: params["password"])
     # binding.pry
-    session[:id] = @user.id
+    session[:user_id] = @user.id
     if @user == "" || @user == nil
       erb :error
     else
