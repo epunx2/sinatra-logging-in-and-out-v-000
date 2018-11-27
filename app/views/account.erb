@@ -9,7 +9,7 @@
     <% user = current_user(session) %>
     <% if is_logged_in?(user) %>
       <h1>Welcome <%= user.username %></h1>
-      <p>$<%= user.balance %></p>
+      <h3>$<%= user.balance %></h3>
     <% else %>
       <% erb :error %>
     <% end %>
