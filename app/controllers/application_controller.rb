@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
-    
+
     session[:user_id] = @user.id
     if @user == "" || @user == nil
       erb :error
