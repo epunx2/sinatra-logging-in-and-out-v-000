@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">
   </head>
   <body id="page-top">
-    <% binding.pry %>
     <% user = Helpers.current_user(session) %>
     <% if Helpers.is_logged_in?(user) %>
       <h1>Welcome <%= user.username %></h1>
